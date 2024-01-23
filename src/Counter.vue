@@ -5,7 +5,7 @@ import { createBrowserInspector } from '@statelyai/inspect';
 
 const { inspect } = createBrowserInspector({
   // Comment out the line below to start the inspector
-  // autoStart: false
+  autoStart: false
 });
 
 const {  snapshot, send } = useMachine(counterMachine, {
@@ -14,53 +14,49 @@ const {  snapshot, send } = useMachine(counterMachine, {
 </script>
 
 <template>
-  <div>
-    <em>{{ snapshot.context.count  }}</em>
+  <main>
+    <p>{{ snapshot.context.count  }}</p>
     <br />
     <button @click="send({ type: 'increase' })">
-      + Increase counter
+      +1<br>
+      <span>Increase count</span>
     </button>
-  </div>
+  </main>
 </template>
 
 <style scoped>
-.step {
+main {
   padding: 2rem;
   background: white;
-  border-radius: 1rem;
-  box-shadow: 0 .5rem 1rem #0001;
+  border-radius: 0.05rem;
+  box-shadow: .1rem .1rem 0 .1rem #07ac9b;
   width: 75vw;
   max-width: 40rem;
+  display: flex;
+  flex-direction: column;
+  align-items: center; 
 }
-
-.feedback>.close-button {
-  position: absolute;
-  top: 0;
-  right: 0;
-  z-index: 1;
+p {
+  font-size: 6rem;
+  font-weight: 600;
+  color: var(--color-primary);
+  text-align: center;
+  margin: 0 0;
 }
-
-.button {
+button {
+  width: min-content;
+  text-wrap: nowrap;
   appearance: none;
   color: white;
   border: none;
   padding: 1rem 1.5rem;
-  border-radius: 0.25rem;
-  font-size: inherit;
+  border-radius: 0.05rem;
+  font-size: 2rem;
   font-weight: bold;
-  margin-right: 1rem;
   background-color: var(--color-primary);
 }
 
-.button:disabled {
-  cursor: not-allowed;
-  opacity: 0.5;
-}
-
-.close-button {
-  appearance: none;
-  background: transparent;
-  border: none;
-  padding: 1rem;
+button span {
+  font-size: .6em;
 }
 </style>
