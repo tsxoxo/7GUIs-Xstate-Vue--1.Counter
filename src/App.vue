@@ -1,9 +1,9 @@
 <script setup lang="ts">
-import Feedback from './Feedback.vue'
+import Counter from './Counter.vue'
 </script>
 
 <template>
-  <Feedback />
+  <Counter />
 </template>
 
 <style scoped></style>
