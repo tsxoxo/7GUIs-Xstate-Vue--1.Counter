@@ -8,55 +8,73 @@ const { inspect } = createBrowserInspector({
   autoStart: false
 });
 
-const {  snapshot, send } = useMachine(counterMachine, {
+const { snapshot, send } = useMachine(counterMachine, {
   inspect
 })
 </script>
 
 <template>
-  <main>
-    <p>{{ snapshot.context.count  }}</p>
-    <br />
-    <button @click="send({ type: 'increase' })">
-      +1<br>
-      <span>Increase count</span>
-    </button>
-  </main>
+  <div class="frame center-children">
+    <main>
+      <p>{{ snapshot.context.count }}</p>
+      <button @click="send({ type: 'increase' })">
+      </button>
+    </main>
+  </div>
 </template>
 
 <style scoped>
-main {
-  padding: 2rem;
-  background: white;
-  border-radius: 0.05rem;
-  box-shadow: .1rem .1rem 0 .1rem #07ac9b;
-  width: 75vw;
-  max-width: 40rem;
+.frame {
   display: flex;
-  flex-direction: column;
-  align-items: center; 
-}
-p {
-  font-size: 6rem;
-  font-weight: 600;
-  color: var(--color-primary);
-  text-align: center;
-  margin: 0 0;
-}
-button {
-  width: min-content;
-  text-wrap: nowrap;
-  appearance: none;
-  color: white;
-  border: none;
-  padding: 1rem 1.5rem;
-  border-radius: 0.05rem;
-  font-size: 2rem;
-  font-weight: bold;
-  background-color: var(--color-primary);
+width: 236px;
+height: 474px;
+padding: 16px 20px 64px 20px;
+flex-direction: column;
+align-items: center;
+flex-shrink: 0;
+  border-radius: 8px 8px 32px 32px;
+  background: linear-gradient(0deg, rgba(0, 0, 0, 0.00) 96.31%, rgba(230, 233, 218, 0.20) 100%), linear-gradient(180deg, rgba(0, 0, 0, 0.00) 94.83%, rgba(72, 75, 56, 0.10) 100%), #AAB397;
+  box-shadow: -5px 2px 4.6px 0px rgba(80, 83, 64, 0.50), 5px 2px 4.6px 0px rgba(80, 83, 64, 0.50), 0px 16px 4.6px -6px rgba(80, 83, 64, 0.50);
 }
 
-button span {
-  font-size: .6em;
+main {
+  display: flex;
+padding: 32px 0px 0px;
+flex-direction: column;
+align-items: center;
+gap: 40px;
+flex: 1 0 0;
+align-self: stretch;
+
+  border-radius: 8px 8px 32px 32px;
+  background: #484B38;
+  box-shadow: 0px -7px 4.7px 0px #E6E9DA inset, 6px 4px 4px 0px rgba(20, 19, 11, 0.25) inset, -6px 4px 4px 0px rgba(20, 19, 11, 0.25) inset;
+}
+
+p {
+  display: flex;
+  width: 140px;
+  height: 140px;
+
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  border-radius: 9999px;
+  background: #E6E9DA;
+  box-shadow: 1px 4px 4px 0px rgba(51, 57, 40, 0.70), 1px -27px 1px -11px rgba(244, 246, 237, 0.90) inset, 1px 13px 1px 0px rgba(48, 55, 36, 0.25) inset, 0px 0px 0px 10px #7A8663 inset;
+  color: #0B0B09;
+  font-family: "Averia Libre", monospace;
+  font-size: 66px;
+  font-style: normal;
+  font-weight: 400;
+  line-height: normal;
+}
+
+button {
+  width: 140px;
+  height: 140px;
+  border-radius: 9999px;
+  background: #2F3025;
+  box-shadow: 0px 10px 1px 2px rgba(20, 19, 11, 0.85), 0px -8px 4px -3px rgba(25, 25, 15, 0.50) inset, 0px 1px 4px -1px rgba(230, 233, 218, 0.40) inset;
 }
 </style>

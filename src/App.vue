@@ -5,5 +5,3 @@ import Counter from './Counter.vue'
 <template>
   <Counter />
 </template>
-
-<style scoped></style>

@@ -3,6 +3,7 @@
 *::after {
   position: relative;
   box-sizing: border-box;
+  margin: 0;
 }
 
 :root {
@@ -10,6 +11,7 @@
   line-height: 1.5;
   font-weight: 400;
   --color-primary: #40e0d0;
+  --color-bg: #9CA58A;
 
   font-synthesis: none;
   text-rendering: optimizeLegibility;
@@ -20,10 +22,13 @@
 
 body {
   margin: 0;
+  min-width: 320px;
+  min-height: 100vh;
+  background: var(--color-bg);
+}
+
+.center-children {
   display: flex;
   place-content: center;
   place-items: center;
-  min-width: 320px;
-  min-height: 100vh;
-  background: #eaeaea;
 }
