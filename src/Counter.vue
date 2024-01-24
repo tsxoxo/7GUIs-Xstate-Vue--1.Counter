@@ -48,7 +48,7 @@ align-self: stretch;
 
   border-radius: 8px 8px 32px 32px;
   background: #484B38;
-  box-shadow: 0px -7px 4.7px 0px #E6E9DA inset, 6px 4px 4px 0px rgba(20, 19, 11, 0.25) inset, -6px 4px 4px 0px rgba(20, 19, 11, 0.25) inset;
+  box-shadow: 0px -6px 2px 0px hsla(72, 25%, 88%, 0.85) inset, 6px 4px 4px 0px rgba(20, 19, 11, 0.25) inset, -6px 4px 4px 0px rgba(20, 19, 11, 0.25) inset;
 }
 
 p {
@@ -61,7 +61,7 @@ p {
   align-items: center;
   border-radius: 9999px;
   background: #E6E9DA;
-  box-shadow: 1px 4px 4px 0px rgba(51, 57, 40, 0.70), 1px -27px 1px -11px rgba(244, 246, 237, 0.90) inset, 1px 13px 1px 0px rgba(48, 55, 36, 0.25) inset, 0px 0px 0px 10px #7A8663 inset;
+  box-shadow: 1px 4px 4px 0px rgba(51, 57, 40, 0.70), 1px 13px 1px 0px rgba(48, 55, 36, 0.25) inset, 0px 0px 0px 10px #7A8663 inset, 1px -27px 1px -11px rgba(244, 246, 237, 0.90) inset;
   color: #0B0B09;
   font-family: "Averia Libre", monospace;
   font-size: 66px;
@@ -71,10 +71,17 @@ p {
 }
 
 button {
+  border: 0;
+  padding: 0;
   width: 140px;
   height: 140px;
   border-radius: 9999px;
   background: #2F3025;
   box-shadow: 0px 10px 1px 2px rgba(20, 19, 11, 0.85), 0px -8px 4px -3px rgba(25, 25, 15, 0.50) inset, 0px 1px 4px -1px rgba(230, 233, 218, 0.40) inset;
+}
+
+button:active {
+  transform: translateY(10px) ;
+  box-shadow: 0px 1px 1px 2px rgba(20, 19, 11, 0.85), 0px -7px 4px -3px rgba(25, 25, 15, 0.50) inset, 0px 3px 4px -1px rgba(230, 233, 218, 0.30) inset;
 }
 </style>
