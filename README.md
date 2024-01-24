@@ -1,6 +1,8 @@
-# The [7 GUIs](https://eugenkiss.github.io/7guis) made with Xstate and Vue.
+# Counter
 
-[Xstate](https://stately.ai/docs) is a framework for using finite state machines (FSM).
+1st task of the [7 GUIs](https://eugenkiss.github.io/7guis).
+
+Made with [Vue](https://vuejs.org/) and [Xstate](https://stately.ai/docs) -- a framework for using finite state machines (FSM).
 
 ---
 
