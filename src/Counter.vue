@@ -63,7 +63,7 @@ p {
   background: #E6E9DA;
   box-shadow: 1px 4px 4px 0px rgba(51, 57, 40, 0.70), 1px 13px 1px 0px rgba(48, 55, 36, 0.25) inset, 0px 0px 0px 10px #7A8663 inset, 1px -27px 1px -11px rgba(244, 246, 237, 0.90) inset;
   color: #0B0B09;
-  font-family: "Averia Libre", monospace;
+  font-family: "Averia Libre", Tahoma, Verdana, Geneva, sans-serif;;
   font-size: 66px;
   font-style: normal;
   font-weight: 400;
